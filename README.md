@@ -63,10 +63,16 @@ Save the file.
 5. Build and Test
 Click Build > Build Solution (or Ctrl+Shift+B).
 
-Find the .exe in bin\Release\SxF_Loader_Wall_V1.exe.
+Find the output in bin\Release (or bin\Debug):
+SxF_Loader_Wall_V1a.xe: The main loader executable, which includes Newtonsoft.Json merged into it (used for parsing internet time).
+
+SxF_Loader_Wall_V1.exe (in Debug mode only): A Visual Studio hosting process for debugging, not needed for release. Ignore or delete it.
+
+Note: Only distribute SxF_Loader_Wall_V1a.exe bin\Release. The merging of Newtonsoft.Json ensures no separate DLL is required.sd
+
 
 Test the loader:
-Run as Administrator.
+Run SxF_Loader_Wall_V1.exe as Administrator.
 
 Click ACTIVATE to verify HWID (should turn green if valid).
 
@@ -75,6 +81,7 @@ Click LOAD to copy quietus.dll and scr_001.sff to the game folder.
 Click BYPASS to restore files and run runAfterBypass.bat (if added).
 
 Ensure the game folder (C:\Program Files (x86)\SpecialForce Rush) exists.
+
 
 6. Release Your Loader
 Share the bin\Release\SxF_Loader_Wall_V1.exe (ZIP it for convenience).
